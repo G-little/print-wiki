@@ -164,6 +164,30 @@
 <li><a href="#_29">返回实例</a></li>
 </ul>
 </li>
+<li><a href="#_30">添加角色</a><ul>
+<li><a href="#_31">请求说明</a></li>
+<li><a href="#_32">输入参数</a></li>
+<li><a href="#_33">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_34">分页拉取角色列表</a><ul>
+<li><a href="#_35">请求说明</a></li>
+<li><a href="#_36">输入参数</a></li>
+<li><a href="#_37">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_38">获取角色详情</a><ul>
+<li><a href="#_39">请求说明</a></li>
+<li><a href="#_40">输入参数</a></li>
+<li><a href="#_41">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_42">删除角色</a><ul>
+<li><a href="#_43">请求说明</a></li>
+<li><a href="#_44">输入参数</a></li>
+<li><a href="#_45">返回实例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -798,7 +822,255 @@
 
 </code></pre>
 
-<p></p></div>
+<h4 id="_30">添加角色</h4>
+<h5 id="_31">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/add</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_32">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">管理员Id</td>
+<td align="left">有更新否则添加</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">角色名称</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">resources</td>
+<td align="center">否</td>
+<td align="left">int[]</td>
+<td align="left">分配权限数组ID列表</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_33">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+     }
+}
+
+
+</code></pre>
+
+<h4 id="_34">分页拉取角色列表</h4>
+<h5 id="_35">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_36">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">当前页码</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_37">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 10,   //分页相关
+        &quot;totalCount&quot;: 1,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;result&quot;: [
+            {
+                &quot;id&quot;: 2, //角色ID
+                &quot;name&quot;: &quot;测试&quot;,//角色名称
+                &quot;privilege&quot;: [ //权限数组
+                    7
+                ],
+                &quot;createTime&quot;: null //创建时间
+            }
+        ],
+        &quot;endIndex&quot;: 10,
+        &quot;startIndex&quot;: 0,
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: true,
+        &quot;nextPage&quot;: 1,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 1
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_38">获取角色详情</h4>
+<h5 id="_39">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_40">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">角色ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_41">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;测试&quot;, //角色名称
+        &quot;privilege&quot;: [ //角色权限
+            7
+        ],
+        &quot;createTime&quot;: null
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_42">删除角色</h4>
+<h5 id="_43">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/del</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_44">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">角色ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_45">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+    }
+}
+
+
+</code></pre>
+
+<p>
+</p></div>
             
         </div>
 
@@ -845,5 +1117,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2019-12-24 12:10:41.760520
+Build Date UTC : 2019-12-24 14:25:58.342317
 -->
