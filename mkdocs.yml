@@ -1,6 +1,6 @@
 site_name: 打印系统 文档中心
 pages:
-    - HOME: print.md
+    - HOME: index.md
     - 接口文档:
-      - 打印系统: print.md
+      - 打印系统: index.md
   
