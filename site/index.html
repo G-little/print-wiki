@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>打印系统 文档中心</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">打印系统 文档中心</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href=".">HOME</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">接口文档 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href=".">打印系统</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href=".">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#_1">管理后台</a></li>
+        
+            <li><a href="#_2">修订记录</a></li>
+        
+            <li><a href="#_3">背景</a></li>
+        
+            <li><a href="#_4">产品说明</a></li>
+        
+            <li><a href="#_5">关键流程说明</a></li>
+        
+            <li><a href="#_6">接口说明</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">管理后台</h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">管理后台</a><ul>
+<li><a href="#_2">修订记录</a></li>
+<li><a href="#_3">背景</a></li>
+<li><a href="#_4">产品说明</a></li>
+<li><a href="#_5">关键流程说明</a></li>
+<li><a href="#_6">接口说明</a><ul>
+<li><a href="#_7">通用接口</a></li>
+<li><a href="#_8">管理权限</a><ul>
+<li><a href="#_9">登录验证码接口</a><ul>
+<li><a href="#_10">请求说明</a></li>
+<li><a href="#_11">输入参数</a></li>
+<li><a href="#_12">返回实例</a></li>
+<li><a href="#_13">错误实例</a></li>
+</ul>
+</li>
+<li><a href="#_14">登陆接口</a><ul>
+<li><a href="#_15">请求说明</a></li>
+<li><a href="#_16">输入参数</a></li>
+<li><a href="#_17">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_18">账号管理（列表）</a><ul>
+<li><a href="#_19">请求说明</a></li>
+<li><a href="#_20">输入参数</a></li>
+<li><a href="#_21">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_22">账号员详情</a><ul>
+<li><a href="#_23">请求说明</a></li>
+<li><a href="#_24">输入参数</a></li>
+<li><a href="#_25">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_26">添加管理员</a><ul>
+<li><a href="#_27">请求说明</a></li>
+<li><a href="#_28">输入参数</a></li>
+<li><a href="#_29">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_30">添加角色</a><ul>
+<li><a href="#_31">请求说明</a></li>
+<li><a href="#_32">输入参数</a></li>
+<li><a href="#_33">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_34">分页拉取角色列表</a><ul>
+<li><a href="#_35">请求说明</a></li>
+<li><a href="#_36">输入参数</a></li>
+<li><a href="#_37">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_38">获取角色详情</a><ul>
+<li><a href="#_39">请求说明</a></li>
+<li><a href="#_40">输入参数</a></li>
+<li><a href="#_41">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_42">删除角色</a><ul>
+<li><a href="#_43">请求说明</a></li>
+<li><a href="#_44">输入参数</a></li>
+<li><a href="#_45">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">修订记录</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>作者</th>
+<th>修订类型</th>
+<th>修订内容</th>
+<th>版本</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019年10月21日</td>
+<td>冷立纲</td>
+<td>A</td>
+<td>新增设计方案</td>
+<td>1.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>【修订类型：A-新增  M-修改 D-删除】</p>
+</blockquote>
+<h2 id="_3">背景</h2>
+<p>蝙蝠租车，客户关系管理相关接口</p>
+<h2 id="_4">产品说明</h2>
+<h2 id="_5">关键流程说明</h2>
+<h2 id="_6">接口说明</h2>
+<h3 id="_7">通用接口</h3>
+<hr />
+<h3 id="_8">管理权限</h3>
+<hr />
+<h4 id="_9">登录验证码接口</h4>
+<h5 id="_10">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/login_code</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">mobile</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">登陆手机号</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_12">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;smscode&quot;: &quot;835898&quot;  //测试环境返回验证码，线上发送短信验证码
+    }
+}
+
+
+</code></pre>
+
+<h5 id="_13">错误实例</h5>
+<p>登录失败</p>
+<pre><code>
+{
+    &quot;c&quot;: 20023,
+    &quot;m&quot;: &quot;一分钟只能发送一次短信&quot;,
+    &quot;d&quot;: null
+}
+
+
+</code></pre>
+
+<h4 id="_14">登陆接口</h4>
+<h5 id="_15">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/login</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_16">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">mobile</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">登陆手机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">password</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">登陆密码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">smscode</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">短信验证码</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_17">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;menus&quot;: [     //菜单列表
+            {
+                &quot;id&quot;: 3,   
+                &quot;title&quot;: &quot;客户查询&quot;,  //菜单名
+                &quot;path&quot;: null,  //路径
+                &quot;parentId&quot;: 0, //父菜单，0 为顶级菜单
+                &quot;type&quot;: 0, //类型 0 普通 ，1 通配符
+                &quot;isMenu&quot;: 1, //是否菜单
+                &quot;createTime&quot;: 1571564520091, //创建时间
+                &quot;privilegePos&quot;: 0, //权限位
+                &quot;privilegeVal&quot;: 1,  //权限值
+                &quot;needAuth&quot;: 1, //是否需要权限认证
+                &quot;checked&quot;: false, //是否选中
+                &quot;subMenus&quot;: [ //子菜单
+                    {
+                        &quot;id&quot;: 5,
+                        &quot;title&quot;: &quot;我的客户&quot;,
+                        &quot;path&quot;: &quot;/customer/list&quot;,
+                        &quot;parentId&quot;: 3,
+                        &quot;type&quot;: 0,
+                        &quot;isMenu&quot;: 1,
+                        &quot;createTime&quot;: 1571564853727,
+                        &quot;privilegePos&quot;: 0,
+                        &quot;privilegeVal&quot;: 2,
+                        &quot;needAuth&quot;: 1,
+                        &quot;checked&quot;: false,
+                        &quot;subMenus&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 6,
+                        &quot;title&quot;: &quot;我的客户审核&quot;,
+                        &quot;path&quot;: &quot;/my/customer_audit&quot;,
+                        &quot;parentId&quot;: 3,
+                        &quot;type&quot;: 0,
+                        &quot;isMenu&quot;: 1,
+                        &quot;createTime&quot;: 1571564912633,
+                        &quot;privilegePos&quot;: 0,
+                        &quot;privilegeVal&quot;: 4,
+                        &quot;needAuth&quot;: 1,
+                        &quot;checked&quot;: false,
+                        &quot;subMenus&quot;: null
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 7,
+                &quot;title&quot;: &quot;客户管理&quot;,
+                &quot;path&quot;: null,
+                &quot;parentId&quot;: 0,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 1,
+                &quot;createTime&quot;: 1571564946707,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 8,
+                &quot;needAuth&quot;: 1,
+                &quot;checked&quot;: false,
+                &quot;subMenus&quot;: [
+                    {
+                        &quot;id&quot;: 8,
+                        &quot;title&quot;: &quot;客户审核&quot;,
+                        &quot;path&quot;: &quot;/customer/audit&quot;,
+                        &quot;parentId&quot;: 7,
+                        &quot;type&quot;: 0,
+                        &quot;isMenu&quot;: 1,
+                        &quot;createTime&quot;: 1571565091170,
+                        &quot;privilegePos&quot;: 0,
+                        &quot;privilegeVal&quot;: 16,
+                        &quot;needAuth&quot;: 1,
+                        &quot;checked&quot;: false,
+                        &quot;subMenus&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 9,
+                        &quot;title&quot;: &quot;客户信息&quot;,
+                        &quot;path&quot;: &quot;/customer/info&quot;,
+                        &quot;parentId&quot;: 7,
+                        &quot;type&quot;: 0,
+                        &quot;isMenu&quot;: 1,
+                        &quot;createTime&quot;: 1571565154486,
+                        &quot;privilegePos&quot;: 0,
+                        &quot;privilegeVal&quot;: 32,
+                        &quot;needAuth&quot;: 1,
+                        &quot;checked&quot;: false,
+                        &quot;subMenus&quot;: null
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 11,
+                &quot;title&quot;: &quot;权限管理&quot;,
+                &quot;path&quot;: &quot;/resources/list&quot;,
+                &quot;parentId&quot;: 0,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 1,
+                &quot;createTime&quot;: 1571565206179,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 64,
+                &quot;needAuth&quot;: 1,
+                &quot;checked&quot;: false,
+                &quot;subMenus&quot;: [
+                    {
+                        &quot;id&quot;: 12,
+                        &quot;title&quot;: &quot;账号管理&quot;,
+                        &quot;path&quot;: null,
+                        &quot;parentId&quot;: 11,
+                        &quot;type&quot;: 0,
+                        &quot;isMenu&quot;: 1,
+                        &quot;createTime&quot;: 1571565222127,
+                        &quot;privilegePos&quot;: 0,
+                        &quot;privilegeVal&quot;: 128,
+                        &quot;needAuth&quot;: 1,
+                        &quot;checked&quot;: false,
+                        &quot;subMenus&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 13,
+                        &quot;title&quot;: &quot;资源管理&quot;,
+                        &quot;path&quot;: &quot;/resources/list&quot;,
+                        &quot;parentId&quot;: 11,
+                        &quot;type&quot;: 0,
+                        &quot;isMenu&quot;: 1,
+                        &quot;createTime&quot;: 1571584000492,
+                        &quot;privilegePos&quot;: 0,
+                        &quot;privilegeVal&quot;: 256,
+                        &quot;needAuth&quot;: 1,
+                        &quot;checked&quot;: false,
+                        &quot;subMenus&quot;: null
+                    }
+                ]
+            }
+        ],
+        &quot;user&quot;: {   //用户信息
+            &quot;id&quot;: 1,
+            &quot;realName&quot;: &quot;王瑾&quot;, //姓名
+            &quot;gender&quot;: 1, //性别 1 男  -1 女
+            &quot;cardId&quot;: null, //身份证号码
+            &quot;birthday&quot;: null, //生日
+            &quot;wxNum&quot;: null, //微信号
+            &quot;mobile&quot;: &quot;13260280107&quot;, //手机号
+            &quot;store&quot;: null, //所属门店
+            &quot;contactName&quot;: null, //联系人姓名
+            &quot;contactMobile&quot;: null, //联系人手机号
+            &quot;relationship&quot;: null, //关系
+            &quot;idCardImg1&quot;: null, //身份证 正面
+            &quot;idCardImg2&quot;: null, //身份证 反面
+            &quot;password&quot;: &quot;17bc7964243108d78e795d79ef493a35&quot;, //登陆密码 md5 加密 
+            &quot;belongTo&quot;: 1, //归属
+            &quot;status&quot;: 1, // 状态 1 正常 -1 禁止登陆
+            &quot;privilege&quot;: null, //权限值
+            &quot;type&quot;: 1, // 类型 1超级管理员  0 普通管理员
+            &quot;createTime&quot;: null, //创建时间
+            &quot;updateTime&quot;: null //更新时间
+        }
+    }
+}
+
+</code></pre>
+
+<h4 id="_18">账号管理（列表）</h4>
+<h5 id="_19">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/admin/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_20">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">realName</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">姓名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">belongTo</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">归属</td>
+<td align="left">1 总部 0 销售</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_21">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 10,
+        &quot;totalCount&quot;: 2,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;result&quot;: [
+            {
+                &quot;id&quot;: 2,   //id
+                &quot;realName&quot;: &quot;小刚&quot;, //姓名
+                &quot;gender&quot;: 1, //性别 1 男 -1 女  0未知
+                &quot;cardId&quot;: null, //身份证
+                &quot;birthday&quot;: null, //生日
+                &quot;wxNum&quot;: null, //微信号
+                &quot;mobile&quot;: &quot;15201008961&quot;, //手机号
+                &quot;store&quot;: null, //门店
+                &quot;contactName&quot;: null, //紧急联系人
+                &quot;contactMobile&quot;: null, //紧急联系人手机
+                &quot;relationship&quot;: null, //关系
+                &quot;idCardImg1&quot;: null, //身份证 正面
+                &quot;idCardImg2&quot;: null, //身份证 反面
+                &quot;password&quot;: &quot;17bc7964243108d78e795d79ef493a35&quot;, //密码md5
+                &quot;belongTo&quot;: null, //归属  1 总部 0 销售
+                &quot;status&quot;: 1, //状态 1 正常  -1 禁止登陆
+                &quot;privilege&quot;: [   //权限
+                    15
+                ],
+                &quot;type&quot;: 0,  //类型 0 普通 1超级管理员
+                &quot;createTime&quot;: 1571660333483, //创建时间 
+                &quot;updateTime&quot;: 1571660885517 //更新时间
+            }
+        ],
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: true,
+        &quot;nextPage&quot;: 1,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 1,
+        &quot;startIndex&quot;: 0,
+        &quot;endIndex&quot;: 10
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_22">账号员详情</h4>
+<h5 id="_23">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/admin/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_24">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">管理员Id</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_25">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+                &quot;id&quot;: 2,   //id
+                &quot;realName&quot;: &quot;小刚&quot;, //姓名
+                &quot;gender&quot;: 1, //性别 1 男 -1 女  0未知
+                &quot;cardId&quot;: null, //身份证
+                &quot;birthday&quot;: null, //生日
+                &quot;wxNum&quot;: null, //微信号
+                &quot;mobile&quot;: &quot;15201008961&quot;, //手机号
+                &quot;store&quot;: null, //门店
+                &quot;contactName&quot;: null, //紧急联系人
+                &quot;contactMobile&quot;: null, //紧急联系人手机
+                &quot;relationship&quot;: null, //关系
+                &quot;idCardImg1&quot;: null, //身份证 正面
+                &quot;idCardImg2&quot;: null, //身份证 反面
+                &quot;password&quot;: &quot;17bc7964243108d78e795d79ef493a35&quot;, //密码md5
+                &quot;belongTo&quot;: null, //归属  1 总部 0 销售
+                &quot;status&quot;: 1, //状态 1 正常  -1 禁止登陆
+                &quot;privilege&quot;: [   //权限
+                    15
+                ],
+                &quot;type&quot;: 0,  //类型 0 普通 1超级管理员
+                &quot;createTime&quot;: 1571660333483, //创建时间 
+                &quot;updateTime&quot;: 1571660885517 //更新时间
+     }
+}
+
+
+</code></pre>
+
+<h4 id="_26">添加管理员</h4>
+<h5 id="_27">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/admin/add</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_28">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">管理员Id</td>
+<td align="left">有更新否则添加</td>
+</tr>
+<tr>
+<td align="left">realName</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">姓名</td>
+<td align="left">真实姓名</td>
+</tr>
+<tr>
+<td align="left">gender</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">性别</td>
+<td align="left">-1 女  1 男 0 未知</td>
+</tr>
+<tr>
+<td align="left">cardId</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">身份证号码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">wxNum</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">微信号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">mobile</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">手机号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">contactName</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">联系人姓名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">contactMobile</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">联系人电话</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">relationship</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">关系</td>
+<td align="left">前端可自定义</td>
+</tr>
+<tr>
+<td align="left">idCardImg1</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">身份证正面</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">idCardImg2</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">身份证反面</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">password</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">密码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">belongTo</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">归属</td>
+<td align="left">1 总部 0 销售</td>
+</tr>
+<tr>
+<td align="left">status</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">状态</td>
+<td align="left">1  正常 -1 禁止登陆</td>
+</tr>
+<tr>
+<td align="left">resources</td>
+<td align="center">是</td>
+<td align="left">int[]</td>
+<td align="left">权限列表</td>
+<td align="left">权限值</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_29">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+     }
+}
+
+
+</code></pre>
+
+<h4 id="_30">添加角色</h4>
+<h5 id="_31">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/add</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_32">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">管理员Id</td>
+<td align="left">有更新否则添加</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">角色名称</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">resources</td>
+<td align="center">否</td>
+<td align="left">int[]</td>
+<td align="left">分配权限数组ID列表</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_33">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+     }
+}
+
+
+</code></pre>
+
+<h4 id="_34">分页拉取角色列表</h4>
+<h5 id="_35">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_36">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">当前页码</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_37">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 10,   //分页相关
+        &quot;totalCount&quot;: 1,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;result&quot;: [
+            {
+                &quot;id&quot;: 2, //角色ID
+                &quot;name&quot;: &quot;测试&quot;,//角色名称
+                &quot;privilege&quot;: [ //权限数组
+                    7
+                ],
+                &quot;createTime&quot;: null //创建时间
+            }
+        ],
+        &quot;endIndex&quot;: 10,
+        &quot;startIndex&quot;: 0,
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: true,
+        &quot;nextPage&quot;: 1,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 1
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_38">获取角色详情</h4>
+<h5 id="_39">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_40">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">角色ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_41">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;测试&quot;, //角色名称
+        &quot;privilege&quot;: [ //角色权限
+            7
+        ],
+        &quot;createTime&quot;: null
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_42">删除角色</h4>
+<h5 id="_43">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/role/del</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_44">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">角色ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_45">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+    }
+}
+
+
+</code></pre>
+
+<p>
+</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script>var base_url = '.';</script>
+        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+        <script src="./js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 0.15.3
+Build Date UTC : 2019-12-24 14:31:12.016787
+-->
