@@ -416,7 +416,8 @@
 | password   | 是 | string  |  密码 | |
 | belongTo   | 是 | int  |  归属 | 1 总部 0 销售 |
 | status   | 是 | int  |  状态 | 1  正常 -1 禁止登陆 |
-| resources   | 是 | int[]  |  权限列表 | 权限值 |
+| roleId   | 是 | int  |  角色ID |  |
+
 
 	
 
@@ -608,6 +609,302 @@
 
 
 ```
+
+
+
+####  资源列表
+
+##### 请求说明
+
+| http 请求方式          |get             |
+|:------------- |:---------------:|
+| url      |/resources/list |
+
+
+#####  输入参数
+
+| 参数          |必选             | 类型       | 参数说明        | 备注          |
+|:-------------|:---------------:|:-------------|:-------------|:-------------|
+| page   | 否 | int  |  分页号 |    |
+| limit   | fou | int  |  单页条数 | |
+
+	
+
+
+#####  返回实例
+
+```
+
+{
+    "c": 0,
+    "m": null,
+    "d": {
+        "pageSize": 10,
+        "totalCount": 10,
+        "currentPage": 1,
+        "unit": "条",
+        "extInfo": null,
+        "startIndex": 0,
+        "firstPage": true,
+        "lastPage": true,
+        "nextPage": 1,
+        "previousPage": 1,
+        "pageCount": 1,
+        "result": [
+            {
+                "id": 38, //id
+                "title": "删除角色",  //标题
+                "path": "/role/del",// url
+                "parentId": 29, //父节点ID
+                "type": 0, // 类型 0 普通
+                "isMenu": 0, //是否菜单项  0 否 1 是
+                "createTime": 1577196434017, //创建时间
+                "privilegePos": 0, //权限位  非手填值
+                "privilegeVal": 512, //权限值 非手填值
+                "needAuth": 1 //是否需要权限校验  0 否 1 是
+            },
+            {
+                "id": 37,
+                "title": "添加角色",
+                "path": "/role/add",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 0,
+                "createTime": 1577196424892,
+                "privilegePos": 0,
+                "privilegeVal": 256,
+                "needAuth": 1
+            },
+            {
+                "id": 36,
+                "title": "角色详情",
+                "path": "/role/get",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 0,
+                "createTime": 1577196411961,
+                "privilegePos": 0,
+                "privilegeVal": 128,
+                "needAuth": 1
+            },
+            {
+                "id": 35,
+                "title": "角色管理",
+                "path": "/role/list",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 1,
+                "createTime": 1577196339165,
+                "privilegePos": 0,
+                "privilegeVal": 64,
+                "needAuth": 1
+            },
+            {
+                "id": 34,
+                "title": "删除资源",
+                "path": "/resources/del",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 0,
+                "createTime": 1577196294243,
+                "privilegePos": 0,
+                "privilegeVal": 32,
+                "needAuth": 1
+            },
+            {
+                "id": 33,
+                "title": "更新资源状态",
+                "path": "/resources/status",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 0,
+                "createTime": 1577196279735,
+                "privilegePos": 0,
+                "privilegeVal": 16,
+                "needAuth": 1
+            },
+            {
+                "id": 32,
+                "title": "资源详情",
+                "path": "/resources/get",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 0,
+                "createTime": 1577196252424,
+                "privilegePos": 0,
+                "privilegeVal": 8,
+                "needAuth": 1
+            },
+            {
+                "id": 31,
+                "title": "添加资源",
+                "path": "/resources/add",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 0,
+                "createTime": 1577196234067,
+                "privilegePos": 0,
+                "privilegeVal": 4,
+                "needAuth": 1
+            },
+            {
+                "id": 30,
+                "title": "资源管理",
+                "path": "/resources/list",
+                "parentId": 29,
+                "type": 0,
+                "isMenu": 1,
+                "createTime": 1577196214413,
+                "privilegePos": 0,
+                "privilegeVal": 2,
+                "needAuth": 1
+            },
+            {
+                "id": 29,
+                "title": "权限管理",
+                "path": "#",
+                "parentId": 0,
+                "type": 0,
+                "isMenu": 1,
+                "createTime": 1577196166692,
+                "privilegePos": 0,
+                "privilegeVal": 1,
+                "needAuth": 1
+            }
+        ],
+        "endIndex": 10
+    }
+}
+
+
+```
+
+
+
+####  添加资源
+
+##### 请求说明
+
+| http 请求方式          |post             |
+|:------------- |:---------------:|
+| url      |/resources/add |
+
+
+#####  输入参数
+
+| 参数          |必选             | 类型       | 参数说明        | 备注          |
+|:-------------|:---------------:|:-------------|:-------------|:-------------|
+| title   | 是 | string  |  标题 |   |
+| path   | 是 | string  |  访问路径  | |
+| parentId   | 是 | int  |  父节点ID  | |
+| type   | 是 | int  |   类型 0 普通 | |
+| isMenu   | 否 | int  |   是否菜单 0 否 1 是 | |
+| needAuth   | 否 | int  |   是否需要权限 0 否 1 是 | |
+
+
+	
+
+
+#####  返回实例
+
+```
+
+{
+    "c": 0,
+    "m": null,
+    "d": {
+ 
+ 
+ 	
+ 	}
+
+}
+
+
+```
+
+
+####  获取角色详情
+
+##### 请求说明
+
+| http 请求方式          |get             |
+|:------------- |:---------------:|
+| url      |/resources/get |
+
+
+#####  输入参数
+
+| 参数          |必选             | 类型       | 参数说明        | 备注          |
+|:-------------|:---------------:|:-------------|:-------------|:-------------|
+| id   | 是 | int  |  权限ID |   |
+
+
+
+	
+
+
+#####  返回实例
+
+```    
+
+{
+    "c": 0,
+    "m": null,
+    "d": {
+        "id": 38, //id
+        "title": "删除角色",  //标题
+        "path": "/role/del",// url
+        "parentId": 29, //父节点ID
+        "type": 0, // 类型 0 普通
+        "isMenu": 0, //是否菜单项  0 否 1 是
+        "createTime": 1577196434017, //创建时间
+        "privilegePos": 0, //权限位  非手填值
+        "privilegeVal": 512, //权限值 非手填值
+        "needAuth": 1 //是否需要权限校验  0 否 1 是
+    }
+}
+
+
+```
+
+
+
+####  删除资源
+
+##### 请求说明
+
+| http 请求方式          |get             |
+|:------------- |:---------------:|
+| url      | /resources/del |
+
+
+#####  输入参数
+
+| 参数          |必选             | 类型       | 参数说明        | 备注          |
+|:-------------|:---------------:|:-------------|:-------------|:-------------|
+| id   | 是 | int  |  权限ID |   |
+
+
+
+	
+
+
+#####  返回实例
+
+```    
+
+{
+    "c": 0,
+    "m": null,
+    "d": {
+       
+    }
+}
+
+
+```
+
 
 
 
