@@ -188,6 +188,30 @@
 <li><a href="#_45">返回实例</a></li>
 </ul>
 </li>
+<li><a href="#_46">资源列表</a><ul>
+<li><a href="#_47">请求说明</a></li>
+<li><a href="#_48">输入参数</a></li>
+<li><a href="#_49">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_50">添加资源</a><ul>
+<li><a href="#_51">请求说明</a></li>
+<li><a href="#_52">输入参数</a></li>
+<li><a href="#_53">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_54">获取角色详情</a><ul>
+<li><a href="#_55">请求说明</a></li>
+<li><a href="#_56">输入参数</a></li>
+<li><a href="#_57">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_58">删除资源</a><ul>
+<li><a href="#_59">请求说明</a></li>
+<li><a href="#_60">输入参数</a></li>
+<li><a href="#_61">返回实例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -801,11 +825,11 @@
 <td align="left">1  正常 -1 禁止登陆</td>
 </tr>
 <tr>
-<td align="left">resources</td>
+<td align="left">roleId</td>
 <td align="center">是</td>
-<td align="left">int[]</td>
-<td align="left">权限列表</td>
-<td align="left">权限值</td>
+<td align="left">int</td>
+<td align="left">角色ID</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1069,7 +1093,395 @@
 
 </code></pre>
 
+<h4 id="_46">资源列表</h4>
+<h5 id="_47">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/resources/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_48">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">分页号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">limit</td>
+<td align="center">fou</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_49">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 10,
+        &quot;totalCount&quot;: 10,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;startIndex&quot;: 0,
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: true,
+        &quot;nextPage&quot;: 1,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 1,
+        &quot;result&quot;: [
+            {
+                &quot;id&quot;: 38, //id
+                &quot;title&quot;: &quot;删除角色&quot;,  //标题
+                &quot;path&quot;: &quot;/role/del&quot;,// url
+                &quot;parentId&quot;: 29, //父节点ID
+                &quot;type&quot;: 0, // 类型 0 普通
+                &quot;isMenu&quot;: 0, //是否菜单项  0 否 1 是
+                &quot;createTime&quot;: 1577196434017, //创建时间
+                &quot;privilegePos&quot;: 0, //权限位  非手填值
+                &quot;privilegeVal&quot;: 512, //权限值 非手填值
+                &quot;needAuth&quot;: 1 //是否需要权限校验  0 否 1 是
+            },
+            {
+                &quot;id&quot;: 37,
+                &quot;title&quot;: &quot;添加角色&quot;,
+                &quot;path&quot;: &quot;/role/add&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 0,
+                &quot;createTime&quot;: 1577196424892,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 256,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 36,
+                &quot;title&quot;: &quot;角色详情&quot;,
+                &quot;path&quot;: &quot;/role/get&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 0,
+                &quot;createTime&quot;: 1577196411961,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 128,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 35,
+                &quot;title&quot;: &quot;角色管理&quot;,
+                &quot;path&quot;: &quot;/role/list&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 1,
+                &quot;createTime&quot;: 1577196339165,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 64,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 34,
+                &quot;title&quot;: &quot;删除资源&quot;,
+                &quot;path&quot;: &quot;/resources/del&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 0,
+                &quot;createTime&quot;: 1577196294243,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 32,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 33,
+                &quot;title&quot;: &quot;更新资源状态&quot;,
+                &quot;path&quot;: &quot;/resources/status&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 0,
+                &quot;createTime&quot;: 1577196279735,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 16,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 32,
+                &quot;title&quot;: &quot;资源详情&quot;,
+                &quot;path&quot;: &quot;/resources/get&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 0,
+                &quot;createTime&quot;: 1577196252424,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 8,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 31,
+                &quot;title&quot;: &quot;添加资源&quot;,
+                &quot;path&quot;: &quot;/resources/add&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 0,
+                &quot;createTime&quot;: 1577196234067,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 4,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 30,
+                &quot;title&quot;: &quot;资源管理&quot;,
+                &quot;path&quot;: &quot;/resources/list&quot;,
+                &quot;parentId&quot;: 29,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 1,
+                &quot;createTime&quot;: 1577196214413,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 2,
+                &quot;needAuth&quot;: 1
+            },
+            {
+                &quot;id&quot;: 29,
+                &quot;title&quot;: &quot;权限管理&quot;,
+                &quot;path&quot;: &quot;#&quot;,
+                &quot;parentId&quot;: 0,
+                &quot;type&quot;: 0,
+                &quot;isMenu&quot;: 1,
+                &quot;createTime&quot;: 1577196166692,
+                &quot;privilegePos&quot;: 0,
+                &quot;privilegeVal&quot;: 1,
+                &quot;needAuth&quot;: 1
+            }
+        ],
+        &quot;endIndex&quot;: 10
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_50">添加资源</h4>
+<h5 id="_51">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/resources/add</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_52">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">title</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">标题</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">path</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">访问路径</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">parentId</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">父节点ID</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">类型 0 普通</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">isMenu</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">是否菜单 0 否 1 是</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">needAuth</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">是否需要权限 0 否 1 是</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_53">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+
+
+    }
+
+}
+
+
+</code></pre>
+
+<h4 id="_54">获取角色详情</h4>
+<h5 id="_55">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/resources/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_56">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">权限ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_57">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: 38, //id
+        &quot;title&quot;: &quot;删除角色&quot;,  //标题
+        &quot;path&quot;: &quot;/role/del&quot;,// url
+        &quot;parentId&quot;: 29, //父节点ID
+        &quot;type&quot;: 0, // 类型 0 普通
+        &quot;isMenu&quot;: 0, //是否菜单项  0 否 1 是
+        &quot;createTime&quot;: 1577196434017, //创建时间
+        &quot;privilegePos&quot;: 0, //权限位  非手填值
+        &quot;privilegeVal&quot;: 512, //权限值 非手填值
+        &quot;needAuth&quot;: 1 //是否需要权限校验  0 否 1 是
+    }
+}
+
+
+</code></pre>
+
+<h4 id="_58">删除资源</h4>
+<h5 id="_59">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/resources/del</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_60">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">int</td>
+<td align="left">权限ID</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_61">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+
+    }
+}
+
+
+</code></pre>
+
 <p>
+
 </p></div>
             
         </div>
@@ -1117,5 +1529,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2019-12-24 14:31:12.016787
+Build Date UTC : 2020-01-03 13:20:58.223333
 -->
