@@ -214,6 +214,15 @@
 </li>
 </ul>
 </li>
+<li><a href="#_62">任务管理</a><ul>
+<li><a href="#_63">拉取任务列表</a><ul>
+<li><a href="#_64">请求说明</a></li>
+<li><a href="#_65">输入参数</a></li>
+<li><a href="#_66">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1480,6 +1489,142 @@
 
 </code></pre>
 
+<h3 id="_62">任务管理</h3>
+<h4 id="_63">拉取任务列表</h4>
+<h5 id="_64">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/task/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_65">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">页码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">taskSn</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">任务编号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">status</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">任务状态</td>
+<td align="left">0 初始 1 已分配  2 已打包  4 完成</td>
+</tr>
+<tr>
+<td align="left">vendorId</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">厂商</td>
+<td align="left">打印厂商</td>
+</tr>
+<tr>
+<td align="left">startTime</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">开始时间</td>
+<td align="left">yyyy-MM-dd HH:mm:ss</td>
+</tr>
+<tr>
+<td align="left">endTime</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">结束时间</td>
+<td align="left">yyyy-MM-dd HH:mm:ss</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_66">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 2,
+        &quot;totalCount&quot;: 19874,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;nextPage&quot;: 2,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 9937,
+        &quot;startIndex&quot;: 0,
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: false,
+        &quot;endIndex&quot;: 2,
+        &quot;result&quot;: [
+            {
+                &quot;taskSn&quot;: &quot;TSK2001041132044875737ED12221793&quot;, //任务编号
+                &quot;skuId&quot;: &quot;SKU001&quot;, //产品编号
+                &quot;createTime&quot;: 1578108768757, //创建时间
+                &quot;batchNo&quot;: &quot;ISB2001041132044875737ED18761777&quot;, //批次号
+                &quot;dataUrl&quot;: &quot;/2020/01/04/11/32/48/7.jpg&quot;, //数据地址
+                &quot;status&quot;: 1, //状态   0 初始 1 已分配  2 已打包  4 完成 
+                &quot;allotSn&quot;: &quot;ALT2001041132044875737ED18841792&quot;, //分配编号
+                &quot;time&quot;: 1, // 分配次数
+                &quot;vendorId&quot;: 1, //厂商
+                &quot;allotTime&quot;: 1578108768757, //分配时间
+                &quot;logisticsName&quot;: &quot;EMS&quot;, //物流
+                &quot;city&quot;: &quot;bj&quot;, //城市
+                &quot;outSn&quot;: null // 三方SN
+            },
+            {
+                &quot;taskSn&quot;: &quot;TSK2001041132044875737ED13241787&quot;,
+                &quot;skuId&quot;: &quot;SKU001&quot;,
+                &quot;createTime&quot;: 1578108768757,
+                &quot;batchNo&quot;: &quot;ISB2001041132044875737ED18761777&quot;,
+                &quot;dataUrl&quot;: &quot;/2020/01/04/11/32/48/4.jpg&quot;,
+                &quot;status&quot;: 1,
+                &quot;allotSn&quot;: &quot;ALT2001041132044875737ED12411786&quot;,
+                &quot;time&quot;: 1,
+                &quot;vendorId&quot;: 1,
+                &quot;allotTime&quot;: 1578108768757,
+                &quot;logisticsName&quot;: &quot;EMS&quot;,
+                &quot;city&quot;: &quot;bj&quot;,
+                &quot;outSn&quot;: null
+            }
+        ]
+    }
+}
+
+
+</code></pre>
+
 <p>
 
 </p></div>
@@ -1529,5 +1674,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2020-01-03 13:20:58.223333
+Build Date UTC : 2020-01-04 03:56:09.169613
 -->
