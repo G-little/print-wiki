@@ -994,6 +994,97 @@
 
 
 ```
+
+
+
+### 打包管理
+
+#### 拉取打包列表
+
+##### 请求说明
+
+| http 请求方式          |post             |
+|:------------- |:---------------:|
+| url      | /bundle/list |
+
+
+#####  输入参数
+
+| 参数          |必选             | 类型       | 参数说明        | 备注          |
+|:-------------|:---------------:|:-------------|:-------------|:-------------|
+| limit   | 否 | int  |  单页条数 |   |
+| page   | 否 | int  |  页码 |   |
+| bundleNo   | 否 | string  |  打包编号 |   |
+| status   | 否 | int  |  任务状态 |  0 初始 1 已打包|
+| vendorId   | 否 | int  |  厂商 |  打印厂商 |
+| startTime   | 否 | string  |  开始时间 |  yyyy-MM-dd HH:mm:ss |
+| endTime   | 否 | string  |  结束时间 |  yyyy-MM-dd HH:mm:ss |
+
+
+
+
+	
+
+
+#####  返回实例
+
+```    
+
+{
+    "c": 0,
+    "m": null,
+    "d": {
+        "pageSize": 2,
+        "totalCount": 398,
+        "currentPage": 1,
+        "unit": "条",
+        "extInfo": null,
+        "nextPage": 2,
+        "previousPage": 1,
+        "pageCount": 199,
+        "startIndex": 0,
+        "firstPage": true,
+        "lastPage": false,
+        "endIndex": 2,
+        "result": [
+            {
+                "id": 399, // 编号
+                "bundleNo": "BOX20010412030457277A5F172433761", //打包编号
+                "logisticsId": null, //物流
+                "skuId": null, //产品
+                "comment": null, //描述
+                "count": 24, //数量
+                "status": 1, //状态  0 初始 1 已打包
+                "dataUrl": "/test.zip", //文件路径
+                "receiveStatus": 0, //收货状态
+                "vendorId": 1, //厂商编号
+                "createTime": 1578110637277, //创建时间
+                "auditorId": null, //审核人
+                "auditorComment": null, //审核描述
+                "receiveTime": null //收货时间
+            },
+            {
+                "id": 398,
+                "bundleNo": "BOX20010411330407781A5F171521016",
+                "logisticsId": null,
+                "skuId": null,
+                "comment": null,
+                "count": 50,
+                "status": 1,
+                "dataUrl": "/test.zip",
+                "receiveStatus": 0,
+                "vendorId": 1,
+                "createTime": 1578108787782,
+                "auditorId": null,
+                "auditorComment": null,
+                "receiveTime": null
+            }
+        ]
+    }
+}
+
+
+```
 
 
 
