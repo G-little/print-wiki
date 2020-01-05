@@ -244,6 +244,21 @@
 </li>
 </ul>
 </li>
+<li><a href="#_80">箱签管理</a><ul>
+<li><a href="#_81">拉取箱签列表</a><ul>
+<li><a href="#_82">请求说明</a></li>
+<li><a href="#_83">输入参数</a></li>
+<li><a href="#_84">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_85">打包详情</a><ul>
+<li><a href="#_86">请求说明</a></li>
+<li><a href="#_87">输入参数</a></li>
+<li><a href="#_88">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1923,6 +1938,189 @@
 
 </code></pre>
 
+<h3 id="_80">箱签管理</h3>
+<h4 id="_81">拉取箱签列表</h4>
+<h5 id="_82">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/bundle_tag/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_83">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">页码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">logisticsId</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">物流编号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">vendorId</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">打印厂商</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">tagStart</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">开始箱签</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">tagEnd</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">结束箱签</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_84">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 2,
+        &quot;totalCount&quot;: 4,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;nextPage&quot;: 2,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 2,
+        &quot;startIndex&quot;: 0,
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: false,
+        &quot;endIndex&quot;: 2,
+        &quot;result&quot;: [
+            {
+                &quot;id&quot;: 4, //编号
+                &quot;skuId&quot;: null, 产品
+                &quot;bundleSn&quot;: &quot;BOX200105170405413260DC4C2031989&quot;, //打包
+                &quot;tagNo&quot;: &quot;202001058&quot;, //箱签
+                &quot;logisticsId&quot;: null, //物流
+                &quot;startSn&quot;: null, //起
+                &quot;endSn&quot;: null,// 止
+                &quot;count&quot;: 50, //数量
+                &quot;createTime&quot;: 1578215081355, //创建时间
+                &quot;pushTime&quot;: 1578215081355, //推送时间
+                &quot;vendorId&quot;: 1 //印刷厂商
+            },
+            {
+                &quot;id&quot;: 3,
+                &quot;skuId&quot;: null,
+                &quot;bundleSn&quot;: &quot;BOX200105170305013100DC4C1541748&quot;,
+                &quot;tagNo&quot;: &quot;202001057&quot;,
+                &quot;logisticsId&quot;: null,
+                &quot;startSn&quot;: null,
+                &quot;endSn&quot;: null,
+                &quot;count&quot;: 50,
+                &quot;createTime&quot;: 1578214981343,
+                &quot;pushTime&quot;: 1578214981343,
+                &quot;vendorId&quot;: 1
+            }
+        ]
+    }
+}
+
+</code></pre>
+
+<h4 id="_85">打包详情</h4>
+<h5 id="_86">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/bundle_tag/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_87">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">long</td>
+<td align="left">打包流水号</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_88">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: 4, //编号
+        &quot;skuId&quot;: null, 产品
+        &quot;bundleSn&quot;: &quot;BOX200105170405413260DC4C2031989&quot;, //打包
+        &quot;tagNo&quot;: &quot;202001058&quot;, //箱签
+        &quot;logisticsId&quot;: null, //物流
+        &quot;startSn&quot;: null, //起
+        &quot;endSn&quot;: null,// 止
+        &quot;count&quot;: 50, //数量
+        &quot;createTime&quot;: 1578215081355, //创建时间
+        &quot;pushTime&quot;: 1578215081355, //推送时间
+        &quot;vendorId&quot;: 1 //印刷厂商
+    }
+}
+
+</code></pre>
+
 <p>
 
 </p></div>
@@ -1972,5 +2170,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2020-01-05 07:09:19.273926
+Build Date UTC : 2020-01-05 09:10:58.851206
 -->
