@@ -221,13 +221,25 @@
 <li><a href="#_66">返回实例</a></li>
 </ul>
 </li>
+<li><a href="#_67">查看任务详情</a><ul>
+<li><a href="#_68">请求说明</a></li>
+<li><a href="#_69">输入参数</a></li>
+<li><a href="#_70">返回实例</a></li>
 </ul>
 </li>
-<li><a href="#_67">打包管理</a><ul>
-<li><a href="#_68">拉取打包列表</a><ul>
-<li><a href="#_69">请求说明</a></li>
-<li><a href="#_70">输入参数</a></li>
-<li><a href="#_71">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_71">打包管理</a><ul>
+<li><a href="#_72">拉取打包列表</a><ul>
+<li><a href="#_73">请求说明</a></li>
+<li><a href="#_74">输入参数</a></li>
+<li><a href="#_75">返回实例</a></li>
+</ul>
+</li>
+<li><a href="#_76">打包详情</a><ul>
+<li><a href="#_77">请求说明</a></li>
+<li><a href="#_78">输入参数</a></li>
+<li><a href="#_79">返回实例</a></li>
 </ul>
 </li>
 </ul>
@@ -1634,9 +1646,86 @@
 
 </code></pre>
 
-<h3 id="_67">打包管理</h3>
-<h4 id="_68">拉取打包列表</h4>
-<h5 id="_69">请求说明</h5>
+<h4 id="_67">查看任务详情</h4>
+<h5 id="_68">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/task/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_69">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">string</td>
+<td align="left">任务流水号</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_70">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;task&quot;: {               //任务信息
+            &quot;taskSn&quot;: &quot;TSK2001041132044875737ED12221793&quot;,// 任务流水
+            &quot;skuId&quot;: &quot;SKU001&quot;, //产品编号
+            &quot;createTime&quot;: 1578108768757, //创建时间
+            &quot;batchNo&quot;: &quot;ISB2001041132044875737ED18761777&quot;, //入库批次号
+            &quot;dataUrl&quot;: &quot;/2020/01/04/11/32/48/7.jpg&quot;, //资源地址
+            &quot;status&quot;: 1, ////状态   0 初始 1 已分配  2 已打包  4 完成 
+            &quot;allotSn&quot;: &quot;ALT2001041132044875737ED18841792&quot;, //任务分配流水
+            &quot;time&quot;: 1, //打印次数
+            &quot;vendorId&quot;: 1, //分发厂商
+            &quot;allotTime&quot;: 1578108768757, //分发时间
+            &quot;logisticsName&quot;: &quot;EMS&quot;, //物流公司
+            &quot;city&quot;: &quot;bj&quot;, //城市
+            &quot;outSn&quot;: null //三方流水
+        },
+        &quot;allotLog&quot;: {
+            &quot;allotSn&quot;: &quot;ALT2001041132044875737ED18841792&quot;, //分配流水
+            &quot;type&quot;: 2, //分配类型 1 人工  2系统
+            &quot;vendorId&quot;: 1, //分配厂商
+            &quot;vendorName&quot;: &quot;北京打印一 厂&quot;, //厂商名称
+            &quot;createTime&quot;: 1578108768757, //创建时间
+            &quot;taskSn&quot;: &quot;TSK2001041132044875737ED12221793&quot;, //任务流水
+            &quot;status&quot;: 2, //分配状态  0 初始 1 分配厂商 2 已打包
+            &quot;bundleNo&quot;: &quot;BOX20010412030457277A5F172433761&quot;, //打包编号
+            &quot;logisticsType&quot;: null, //物流类型 1:打包  2:单发
+            &quot;logisticsId&quot;: null, // 物流ID
+            &quot;receiveStatus&quot;: 0 //收货状态  0 初始  1已发货 2 已收货
+        },
+        &quot;logisticsLog&quot;: null  //物流信息
+    }
+}
+
+</code></pre>
+
+<h3 id="_71">打包管理</h3>
+<h4 id="_72">拉取打包列表</h4>
+<h5 id="_73">请求说明</h5>
 <table>
 <thead>
 <tr>
@@ -1651,7 +1740,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="_70">输入参数</h5>
+<h5 id="_74">输入参数</h5>
 <table>
 <thead>
 <tr>
@@ -1714,7 +1803,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="_71">返回实例</h5>
+<h5 id="_75">返回实例</h5>
 <pre><code>
 {
     &quot;c&quot;: 0,
@@ -1772,6 +1861,68 @@
 
 </code></pre>
 
+<h4 id="_76">打包详情</h4>
+<h5 id="_77">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/bundle/get</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_78">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">是</td>
+<td align="left">long</td>
+<td align="left">打包流水号</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_79">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;id&quot;: 399, //打包ID
+        &quot;bundleNo&quot;: &quot;BOX20010412030457277A5F172433761&quot;, //打包编号
+        &quot;logisticsId&quot;: null, //物流ID
+        &quot;skuId&quot;: null, //产品
+        &quot;comment&quot;: null, //描述
+        &quot;count&quot;: 24, //数量
+        &quot;status&quot;: 1, //状态  0 初始 1 打包完成
+        &quot;dataUrl&quot;: &quot;/test.zip&quot;, //数据文件
+        &quot;receiveStatus&quot;: 0, // 收货状态  0 初始  1已发货 2 已收货
+        &quot;vendorId&quot;: 1, //打印厂商
+        &quot;createTime&quot;: 1578110637277, //创建时间
+        &quot;auditorId&quot;: null, //审核人
+        &quot;auditorComment&quot;: null, //审核描述
+        &quot;receiveTime&quot;: ,//收货时间
+    }
+}
+
+</code></pre>
+
 <p>
 
 </p></div>
@@ -1821,5 +1972,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2020-01-04 04:34:48.229369
+Build Date UTC : 2020-01-05 07:08:59.506661
 -->
