@@ -223,6 +223,15 @@
 </li>
 </ul>
 </li>
+<li><a href="#_67">打包管理</a><ul>
+<li><a href="#_68">拉取打包列表</a><ul>
+<li><a href="#_69">请求说明</a></li>
+<li><a href="#_70">输入参数</a></li>
+<li><a href="#_71">返回实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1625,6 +1634,144 @@
 
 </code></pre>
 
+<h3 id="_67">打包管理</h3>
+<h4 id="_68">拉取打包列表</h4>
+<h5 id="_69">请求说明</h5>
+<table>
+<thead>
+<tr>
+<th align="left">http 请求方式</th>
+<th align="center">post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">url</td>
+<td align="center">/bundle/list</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_70">输入参数</h5>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="center">必选</th>
+<th align="left">类型</th>
+<th align="left">参数说明</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">单页条数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">页码</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">bundleNo</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">打包编号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">status</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">任务状态</td>
+<td align="left">0 初始 1 已打包</td>
+</tr>
+<tr>
+<td align="left">vendorId</td>
+<td align="center">否</td>
+<td align="left">int</td>
+<td align="left">厂商</td>
+<td align="left">打印厂商</td>
+</tr>
+<tr>
+<td align="left">startTime</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">开始时间</td>
+<td align="left">yyyy-MM-dd HH:mm:ss</td>
+</tr>
+<tr>
+<td align="left">endTime</td>
+<td align="center">否</td>
+<td align="left">string</td>
+<td align="left">结束时间</td>
+<td align="left">yyyy-MM-dd HH:mm:ss</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_71">返回实例</h5>
+<pre><code>
+{
+    &quot;c&quot;: 0,
+    &quot;m&quot;: null,
+    &quot;d&quot;: {
+        &quot;pageSize&quot;: 2,
+        &quot;totalCount&quot;: 398,
+        &quot;currentPage&quot;: 1,
+        &quot;unit&quot;: &quot;条&quot;,
+        &quot;extInfo&quot;: null,
+        &quot;nextPage&quot;: 2,
+        &quot;previousPage&quot;: 1,
+        &quot;pageCount&quot;: 199,
+        &quot;startIndex&quot;: 0,
+        &quot;firstPage&quot;: true,
+        &quot;lastPage&quot;: false,
+        &quot;endIndex&quot;: 2,
+        &quot;result&quot;: [
+            {
+                &quot;id&quot;: 399, // 编号
+                &quot;bundleNo&quot;: &quot;BOX20010412030457277A5F172433761&quot;, //打包编号
+                &quot;logisticsId&quot;: null, //物流
+                &quot;skuId&quot;: null, //产品
+                &quot;comment&quot;: null, //描述
+                &quot;count&quot;: 24, //数量
+                &quot;status&quot;: 1, //状态  0 初始 1 已打包
+                &quot;dataUrl&quot;: &quot;/test.zip&quot;, //文件路径
+                &quot;receiveStatus&quot;: 0, //收货状态
+                &quot;vendorId&quot;: 1, //厂商编号
+                &quot;createTime&quot;: 1578110637277, //创建时间
+                &quot;auditorId&quot;: null, //审核人
+                &quot;auditorComment&quot;: null, //审核描述
+                &quot;receiveTime&quot;: null //收货时间
+            },
+            {
+                &quot;id&quot;: 398,
+                &quot;bundleNo&quot;: &quot;BOX20010411330407781A5F171521016&quot;,
+                &quot;logisticsId&quot;: null,
+                &quot;skuId&quot;: null,
+                &quot;comment&quot;: null,
+                &quot;count&quot;: 50,
+                &quot;status&quot;: 1,
+                &quot;dataUrl&quot;: &quot;/test.zip&quot;,
+                &quot;receiveStatus&quot;: 0,
+                &quot;vendorId&quot;: 1,
+                &quot;createTime&quot;: 1578108787782,
+                &quot;auditorId&quot;: null,
+                &quot;auditorComment&quot;: null,
+                &quot;receiveTime&quot;: null
+            }
+        ]
+    }
+}
+
+
+</code></pre>
+
 <p>
 
 </p></div>
@@ -1674,5 +1821,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2020-01-04 03:57:30.289523
+Build Date UTC : 2020-01-04 04:34:48.229369
 -->
